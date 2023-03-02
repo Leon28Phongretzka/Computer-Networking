@@ -1,0 +1,15 @@
+1) Consider a source computer (S) transmitting a file of size 106 bits to a destination computer (D) over a network of two routers (R1 and R2) and three links (L1, L2 and L3). L1 connects S to R1;L2 connects R1 to R2; and L3 connects R2 to D. Let each link be of length 100km. Assume signals travel over each link at a speed of 10^8 meters per second. Assume that the link bandwidth on each link is 1Mbps. Let the file be broken down into 1000 packets each of size 1000 bits. Find the total sum of transmission and propagation delays in transmitting the file from S to D?
+(A) 1005ms
+(B) 1010ms
+(C) 3000ms
+(D) 3003ms
+
+Answer (A)
+
+
+Propagation delay to travel from S to R1 = (Distance) / (Link Speed) = 10^5/10^8 = 1ms
+Total prorogation delay to travel from S to D = 3*1 ms = 3ms
+
+Total Ttransmission delay for 1 packet = 3 * (Number of Bits) / Bandwidth = 3*(1000/10^6) = 3ms.
+
+The first packet will take 6ms to reach D. While first packet was reaching D, other packets must have been processing in parallel. So D will receive remaining packets 1 packet per 1 ms from R2. So remaining 999 packets will take 999 ms. And total time will be 999 + 6 = 1005 ms

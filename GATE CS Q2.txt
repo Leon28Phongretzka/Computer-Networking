@@ -1,0 +1,22 @@
+2) In a packet switching network, packets are routed from source to destination along a single path having two intermediate nodes. If the message size is 24 bytes and each packet contains a header of 3 bytes, then the optimum packet size is:
+(a) 4
+(b) 6
+(c) 7
+(d) 9
+
+Let transmission time to transfer 1 byte for all nodes be t. The first packet will take time = (packet size)*3*t. After the first packet reaches the destination, remaining packets will take time equal to (packet size)*t due to parallelism.
+
+If we use 4 bytes as packet size, there will be 24 packets
+Total Transmission time = Time taken by first packet + 
+                          Time taken by remaining packets 
+                       = 3*4*t + 23*4*t = 104t
+
+If we use 6 bytes as packet size, there will be 8 packets
+Total Transmission time = 3*6*t + 7*6*t = 60t
+
+If we use 7 bytes as packet size, there will be 6 packets
+Total Transmission time = 3*7*t + 5*7*t = 56t
+
+If we use 9 bytes as packet size, there will be 4 packets
+Total Transmission time = 3*9*t + 3*9*t = 54t
+

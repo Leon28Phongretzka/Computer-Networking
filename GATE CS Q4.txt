@@ -1,0 +1,11 @@
+Consider the following statements about the functionality of an IP based router.
+
+I. A router does not modify the IP packets during forwarding.
+II. It is not necessary for a router to implement any routing protocol.
+III. A router should reassemble IP fragments if the MTU of the outgoing link is larger than the size of the incoming IP packet.
+
+Which of the above statements is/are TRUE?
+
+II only is the answer. Because a router must implement a routing protocol to forward packets. 
+It is not necessary that it should implement all routing protocols. It can implement only one or two routing protocols. 
+But it must implement at least one routing protocol.

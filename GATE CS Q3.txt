@@ -1,0 +1,17 @@
+4) An Internet Service Provider(ISP) has the following chunk of CIDR-based IP addresses available with it:245.248.128.0/20. 
+The ISP wants to give half of this chunk of addresses to Organization A, and a quarter to Organization B, 
+while retaining the remaining with itself. Which of the following is a valid allocation of addresses to A and B? 
+(A) 245.248.136.0/21 and 245.248.128.0/22 
+(B) 245.248.128.0/21 and 245.248.128.0/22 
+(C) 245.248.132.0/22 and 245.248.132.0/21 
+(D) 245.248.136.0/22 and 245.248.132.0/21 
+
+Answer (A) 
+Since routing prefix is 20, the ISP has 2^(32-20) or 2^12 addresses. Out of these 2^12 addresses, half (or 2^11) addresses have to be given to organization A and quarter (2^10) addresses have to be given to organization B. 
+So routing prefix for organization A will be 21. For B, it will be 22. 
+If we see all options given in question, only options (A) and (B) are left as only these options have same number of routing prefixes. 
+Now we need to choose from option (A) and (B). 
+To assign addresses to organization A, ISP needs to take first 20 bits from 245.248.128.0 and fix the 21st bit as 0 or 1. 
+Similarly, ISP needs to fix 21st and 22nd bits for organization B. 
+If we take a closer look at the options (A) and (B), we can see the 21st and 22nd bits for organization B are considered as 0 in both options. 
+So 21st bit of organization A must be 1. Now take the first 20 bits from 245.248.128.0 and 21st bit as 1, we get addresses for organization A as 245.248.136.0/21 

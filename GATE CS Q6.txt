@@ -1,0 +1,20 @@
+Host A (on TCP/IP v4 network A) sends an IP datagram D to host B (also on TCP/IP v4 network B). Assume that no error occurred during the transmission of D. When D reaches B, which of the following IP header field(s) may be different from that of the original datagram D?
+
+(i) TTL 
+(ii) Checksum 
+(iii) Fragment Offset
+(A) (i) only
+(B) (i) and (ii) only
+(C) (ii) and (iii) only
+(D) (i), (ii) and (iii)
+
+
+Answer: (D)
+
+Explanation: All (i), (ii) and (iii) are changed:
+
+(i) TTL is decremented at every hop. So TTL is different from original value
+
+(ii) Since TTL changes, the Checksum of the packet also changes.
+
+(iii) A packet is fragmented if it has a size greater than the Maximum Transmission Unit (MTU) of the network. There may be intermediate networks that may change fragment offset by fragmenting the packet.
