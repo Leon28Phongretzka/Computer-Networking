@@ -1,0 +1,11 @@
+1) An organization has a class B network and wishes to form subnets for 64 departments. The subnet mask would be:
+(a) 255.255.0.0
+(b) 255.255.64.0
+(c) 255.255.128.0
+(d) 255.255.252.0
+
+Answer (d)
+The size of network ID is 16 bit in class B networks. So bits after 16th bit must be used to create 64 departments. Total 6 bits are needed to identify 64 different departments. 
+=> FF.FF.11111100.00 is the solution
+
+Therefore, subnet mask will be 255.255.252.0.
